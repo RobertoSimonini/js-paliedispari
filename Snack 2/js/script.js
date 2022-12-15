@@ -15,6 +15,9 @@ const select = document.getElementById('select');
 const userNumberElement = document.getElementById('user-number');
 const playBtn = document.getElementById('play-btn');
 const message = document.getElementById('message');
+// const evenOption = document.getElementById('even');
+// const oddOption = document.getElementById('odd');
+const userChoice = document.getElementById('user-choice');
 
 // Creo una funzione che generi un numero random da 1 a 5 per il Computer 
 function generatePcRandomnumber () {
@@ -31,7 +34,7 @@ playBtn.addEventListener ('click', function (){
 
     // Prendiamo il valore dell'input fornitoci dall'utente 
     const userNumber = parseInt(userNumberElement.value);
-    
+
     // ! Validation 
     if (isNaN(userNumber) || (userNumber < 1) ) {
         message.innerText = 'Non hai inserito valori validi.'
@@ -42,9 +45,19 @@ playBtn.addEventListener ('click', function (){
     let pcNumber = generatePcRandomnumber();
 
     // Sommiamo il numero random generato dal computer e quello scelto dall'utente 
-
     const sum = userNumber + pcNumber;
-    console.log(sum);
-    console.log(userNumber, pcNumber);
+
+    // Prendo il value della select 
+    const userChoiceValue = userChoice.value;
+
+    // Creo le condizioni e aggiungo la fazione isEven per annunciare il vincitore 
+    if ((userChoiceValue === 'pari') & isEven(sum)) {
+    message.innerText = `Hai scelto ${userChoiceValue} e la somma è  ${sum} quindi hai vinto!`
+    } else if ((userChoiceValue === 'dispari') & !isEven(sum)) {
+        message.innerText = `Hai scelto ${userChoiceValue} e la somma è  ${sum} quindi hai vinto!`
+    }else {
+    message.innerText = `Hai scelto ${userChoiceValue} ma la somma è ${sum} quindi hai perso.`
+
+    }
 
 });
