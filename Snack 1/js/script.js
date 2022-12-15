@@ -8,3 +8,15 @@
 const userWordElement = document.getElementById('user-word');
 const btnCheck = document.getElementById('btn');
 
+// Aggiungo l'evento al click del bottone 
+btnCheck.addEventListener('click', function(){
+    // Prendo il value dell'input 
+    const userWord = userWordElement.value.trim();
+
+    // ! Validazione 
+    if (!userWord) {
+        alert('non hai inserito valori validi.')
+        return;
+    }
+
+});
