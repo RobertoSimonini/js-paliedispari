@@ -16,6 +16,9 @@ const userNumberElement = document.getElementById('user-number');
 const playBtn = document.getElementById('play-btn');
 
 // Creo una funzione che generi un numero random da 1 a 5 per il Computer 
-function generatePcRandomnumber {
-    const pcRandomElement = Math.floor((Math.random()*5) + 1); 
-}
+function generatePcRandomnumber () {
+    const pcRandomElement = Math.floor((Math.random()*5) + 1);
+    return pcRandomElement;
+};
+
+console.log(generatePcRandomnumber());
