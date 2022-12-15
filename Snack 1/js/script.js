@@ -10,10 +10,6 @@ const btnCheck = document.getElementById('btn');
 const message = document.getElementById('message');
 
 
-
-
-
-
 // Aggiungo l'evento al click del bottone 
 btnCheck.addEventListener('click', function(){
     // Prendo il value dell'input 
