@@ -11,7 +11,7 @@ const message = document.getElementById('message');
 
 
 
-// Creo una funzione che mi permetta di verificare che la paroala dell'utente sia palindroma 
+
 
 
 // Aggiungo l'evento al click del bottone 
@@ -35,7 +35,7 @@ btnCheck.addEventListener('click', function(){
     }   
 });
 
-
+// Creo una funzione che mi permetta di verificare che la paroala dell'utente sia palindroma 
 function isPalindrome (word){
 
     // Trasformo la parola sempre in Lowercase perchè se mette un nome non riesco a confrontarli 
