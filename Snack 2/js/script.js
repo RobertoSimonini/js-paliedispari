@@ -19,22 +19,28 @@ const message = document.getElementById('message');
 // Creo una funzione che generi un numero random da 1 a 5 per il Computer 
 
 function generatePcRandomnumber () {
-    const pcRandomElement = Math.floor((Math.random()*5) + 1);
-    return pcRandomElement;
+    const pcNumber = Math.floor((Math.random()*5) + 1);
+    return pcNumber;
 };
 
 playBtn.addEventListener ('click', function (){
 
     // Prendiamo il valore dell'input fornitoci dall'utente 
-    const userNumberValue = parseInt(userNumberElement.value);
+    const userNumber = parseInt(userNumberElement.value);
     
     // ! Validation 
-    if (isNaN(userNumberValue) || (userNumberValue < 1) ) {
+    if (isNaN(userNumber) || (userNumber < 1) ) {
         message.innerText = 'Non hai inserito valori validi.'
         return
     }
 
+    // Aggiungiamo la funzione che generi il numero random del Pc 
+    let pcNumber = generatePcRandomnumber();
 
-    console.log(userNumberValue);
+    // Sommiamo il numero random generato dal computer e quello scelto dall'utente 
+
+    const sum = userNumber + pcNumber;
+    console.log(sum);
+    console.log(userNumber, pcNumber);
 
 });
