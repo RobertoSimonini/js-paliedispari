@@ -10,3 +10,12 @@
     Dichiariamo chi ha vinto.
 */
 
+// Prendo gli elementi dal DOM 
+const select = document.getElementById('select');
+const userNumberElement = document.getElementById('user-number');
+const playBtn = document.getElementById('play-btn');
+
+// Creo una funzione che generi un numero random da 1 a 5 per il Computer 
+function generatePcRandomnumber {
+    const pcRandomElement = Math.floor((Math.random()*5) + 1); 
+}
